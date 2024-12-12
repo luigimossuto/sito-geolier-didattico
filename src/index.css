@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-serif;
+  }
+
+.modal-center {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-sticky {
+    position: sticky!important;
+    top: 0!important;
+    z-index: 1000!important;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 13s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee 13s linear infinite;
+  animation-delay: -30s;
+}
+
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+.product-title {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 3.5rem;
+}
+
+.title-part {
+  white-space: nowrap;
+}
+
+@media (max-width: 1175px) {
+  .product-title {
+    flex-direction: column;
+  }
+  
+  .title-part {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1175px) {
+  .product-title {
+    line-height: 3rem;
+  }
+}
+
+/* Aggiungi questa nuova media query per il footer */
+@media (max-width: 640px) {
+  .footer-padding {
+    padding-top: 3.5rem; /* Puoi aggiustare questo valore secondo le tue necessità */
+  }
+}
+
+.cls-1 {
+  opacity: .95;
+}
+
+.cls-1, .cls-2 {
+  fill: #1f3d7c;
+}
+
+.cls-1, .cls-2, .cls-3 {
+  stroke-width: 0px;
+}
+
+.cls-3 {
+  fill: #1f98d4;
+}
